@@ -1,1 +1,86 @@
-My Guhub Page
+ <html lang="en">
+
+<head>
+    <title>Algorithms</title>
+        <!-- here is main css file -->
+        <link href="css/main.css" type="text/css" rel="stylesheet" />
+        <!-- CSS3 animations file -->
+        <script src="external/jquery.min.js"></script>
+        <script src="external/jquery.easing.js"></script>
+        <script src="external/processing-1.3.6.js"></script>
+        <script src="external/base.js"></script>
+        <script src="external/custom.js"></script>
+
+        <script data-main="src/stackMain" src="external/require.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="container">
+
+<!-- START .content-wrapper -->
+<div class="content-wrapper">
+
+    <div id="main-nav">
+
+    <!-- this is arrow that show you your current page -->
+    <div class="current"></div>
+        <!-- START #top-menu -->
+        <ul id="top-menu">
+            <li><a class="current-pos" href="#" page="stack">Stack</a></li>
+            <li><a href="#" page="queue">Queue</a></li>
+        </ul>
+        <!-- END #top-menu -->
+    </div>
+    <!-- END #main-nav -->
+
+<!-- START #main-content -->
+<div id="main-content">
+
+<!-- START #content -->
+<div id="content">
+
+
+<!-- START - HOME PAGE -->
+<div id="stack" class="page" style="display:block;">
+    <div class="inner-page">
+        <h1 class="name">Stack</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="stackPush">Push</button>
+        <button id="stackPop">Pop</button>
+        <br />
+        <br />
+        <canvas id="stackCanvas"></canvas>
+    </div>
+</div>
+<!-- END - HOME PAGE -->
+
+
+<!-- START - HOME PAGE -->
+<div id="queue">
+    <div class="inner-page">
+        <h1 class="name">Queue</h1>
+    </div>
+</div>
+<!-- END - HOME PAGE -->
+
+
+
+
+</div>
+<!-- END - #content     -->
+</div>
+<!-- END - #main-content -->
+
+
+</div>
+<!-- END - content-wrapper -->
+</div>
+<!-- END - #container    -->
+
+</body>
+
+</html>

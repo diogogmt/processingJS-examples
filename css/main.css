@@ -1,0 +1,199 @@
+/* OnRush v1.0
+/* Masterminded by MEKS */
+
+/* --------------------------------------------------
+    Table of Contents
+-----------------------------------------------------
+:: 1.	Global Reset & Standards
+:: 2.	Elements
+:: 3.	Typography
+:: 4.	Page Layout
+:: 5.	Main Navigation
+:: 6.	Home Page and Miscs
+:: 7.	About Page
+:: 8.	Portfolio Page
+:: 9.	Social Page
+:: 10.	Contact Page
+:: 11.  Skills Page
+:: 12.	Footer
+:: 13.	Template Modifications
+*/
+
+/*	--------------------------------------------------
+	:: 1.Global Reset & Standards
+	-------------------------------------------------- */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a:focus{
+	outline:none;
+}
+a:hover{
+	text-decoration:none;
+}
+body {
+	background: url("../images/bg16.png");
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #555;
+	position: relative;
+	border-top:1px solid #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------
+	:: 2.Elements
+---------------------------------------------------*/
+	.left       { float: left; }
+	.right      { float: right; }
+	.hide     	{ display: none; }
+/*	--------------------------------------------------
+    :: 3.Typography
+	-------------------------------------------------- */
+	h1, h2, h3, h4, h5, h6 { color: #676767; font-weight: bold; margin-bottom:10px;}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 34px; line-height: 38px;}
+	h2 { font-size: 28px; line-height: 33px;}
+	h3 { font-size: 24px; line-height: 29px;}
+	h4 { font-size: 18px; line-height:25px;}
+	h5 { font-size: 16px; line-height:23px; font-weight: normal; margin-bottom: 6px; }
+	h6 { font-size: 14px; line-height:21px; font-weight: normal; }
+
+	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
+
+	p { line-height: 18px; font-size:12px; margin: 0 0 10px; }
+	p img { margin: 0; }
+	em, i { font-style: italic; line-height: inherit; }
+	strong, b { font-weight: bold; line-height: inherit; }
+	small { font-size: 60%; line-height: inherit; }
+	h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
+	/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 20px; color: #777; }
+	blockquote { border-left: 4px solid #DDDDDD;float: left; margin: 0 30px 10px 20px;padding: 5px 10px 5px 20px;
+    width: 380px;}
+	blockquote cite { display: block; font-size: 12px; font-size: 1.2em; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited { color: #555; }
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 12px 0 18px; height: 0; }
+	.text-left{text-align:left;}
+	.text-center{text-align:center;}
+	.text-right{text-align:right;}
+
+/* --------------------------------------------------
+	:: 4.Page Layout
+	-------------------------------------------------- */
+
+#container{
+	width: 100%;
+}
+.content-wrapper{
+	width:960px;
+	margin: 10px auto 0;
+}
+#main-content{
+    position: relative;
+	width:920px;
+	padding: 10px 20px 15px;
+	background:#fff;
+	-webkit-border-radius:3px 3px 3px 3px;
+	-moz-border-radius:3px 3px 3px 3px;
+	border-radius:3px 3px 3px 3px;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 0 3px rgba(0,0,0,0.1);
+	box-shadow:0 0 3px rgba(0,0,0,0.1);
+	height:550px;
+	margin: 20px 0 20px;
+}
+
+/* --------------------------------------------------
+	:: 5.Main Navigation
+	-------------------------------------------------- */
+
+#main-nav{
+	position: relative;
+	background:#fff;
+	width:100%;
+	height:48px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 0 3px rgba(0,0,0,0.1);
+	box-shadow:0 0 3px rgba(0,0,0,0.1);
+}
+ul#top-menu{
+   	height: 35px;
+   	padding: 15px 10px 0;
+}
+ul#top-menu li{
+	display: inline-block;
+	margin: 0 10px;
+}
+ul#top-menu li a{
+	color: #666;
+	font-weight:normal;
+	font-size:16px;
+	line-height:1.2em;
+	text-decoration:none;
+}
+.current{
+    background-image: url("../images/current.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    height: 21px;
+    left: 22px;
+    position: absolute;
+    top: -9px;
+    width: 39px;
+}
+
+
+/*	--------------------------------------------------
+	::13. Template Modifications
+	-------------------------------------------------- */
+/* SITE MODE 1*/
+#content{
+    float: left;
+    height: 100%;
+}
+.page{
+    float: left;
+    height: 100%;
+    width: 920px;
+}
+#content{
+	overflow: hidden;
+	position: relative;
+}
+
+
