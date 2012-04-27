@@ -13,6 +13,8 @@ $(document).ready(function() {
         console.log("page_id: ", page_id);
 
         var page = $(this).attr("page");
+        console.log("oldPage: ", oldPage);
+        console.log("page: ", page);
 
         $("#"+oldPage).hide();
         $("#"+page).show();

@@ -1,6 +1,8 @@
 define (function (require) {
 
   console.log("element.js");
+  var app = require("./config");
+  console.log("app: ", app);
 
   Element = Base.extend({
     "x": 0,
@@ -11,39 +13,64 @@ define (function (require) {
     "number": 0,
     "finalY": 0,
     "type": 0,
+    "empty": false,
+    "pjs": null,
 
     constructor: function (options) {
-      console.log("element constructor");
       for (var i in options) {
         this[i] !== undefined ? this[i] = options[i] : 0;
       }
     },
 
     draw: function (y) {
-      pjs.fill(this.color.r, this.color.g, this.color.b);
-      pjs.rect(this.x, this.y, this.width, this.height);
-      pjs.fill(0);
-      pjs.textSize(32);
-      pjs.text(this.number, this.x + (this.width / 2),
-        this.y + (this.height / 2));
+      this.pjs.fill(this.color.r, this.color.g, this.color.b);
+      this.pjs.rect(this.x, this.y, this.width, this.height);
+      this.pjs.fill(0);
+      this.pjs.textSize(32);
+      var x = this.x + (this.width / 2) - 10
+        , y = this.y + app.ELEMENT_HEIGHT - 10;
+      !this.empty && this.pjs.text(+this.number, x, y);
     },
 
     maybeDelete: function () {
-      return this.type === DEFAULT && this.y === 0;
+      return this.type === app.DEFAULT && this.y === 0;
     },
 
     animate: function () {
-      if (this.type === PUSH) {
+      var animationCompleted = false;
+
+      if (this.type === app.PUSH) {
         this.y < this.finalY
           ? this.y++
-          : this.type = DEFAULT;
+          : animationCompleted = true;
 
       }
-      else if (this.type === POP) {
+      else if (this.type === app.POP) {
         this.y > 0
           ? this.y--
-          : this.type = DEFAULT;
+          : animationCompleted = true;
       }
+
+      if (animationCompleted) {
+        this.type = app.DEFAULT;
+        return false;
+      }
+
+      return true;
+    },
+
+    setNumber: function (n) {
+      this.number = +n;
+      this.empty = false;
+    },
+
+    clearNumber: function () {
+      this.number = "";
+      this.empty = true;
+    },
+
+    getNumber: function () {
+      return !this.empty ? this.number :  false;
     },
 
   });

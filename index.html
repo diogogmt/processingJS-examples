@@ -11,8 +11,7 @@
         <script src="external/base.js"></script>
         <script src="external/custom.js"></script>
 
-        <script data-main="src/stackMain" src="external/require.js"></script>
-
+        <script data-main="src/main" src="external/require.js"></script>
 </head>
 
 <body>
@@ -31,6 +30,7 @@
         <ul id="top-menu">
             <li><a class="current-pos" href="#" page="stack">Stack</a></li>
             <li><a href="#" page="queue">Queue</a></li>
+            <li><a href="#" page="cyclic-queue">Cyclic Queue</a></li>
         </ul>
         <!-- END #top-menu -->
     </div>
@@ -43,12 +43,12 @@
 <div id="content">
 
 
-<!-- START - HOME PAGE -->
-<div id="stack" class="page" style="display:block;">
+<!-- START - STACK -->
+<div id="stack" style="display:block;">
     <div class="inner-page">
         <h1 class="name">Stack</h1>
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
+        <button id="stackStart">Start</button>
+        <button id="stackStop">Stop</button>
         <button id="stackPush">Push</button>
         <button id="stackPop">Pop</button>
         <br />
@@ -56,16 +56,38 @@
         <canvas id="stackCanvas"></canvas>
     </div>
 </div>
-<!-- END - HOME PAGE -->
+<!-- END - STACK -->
 
 
-<!-- START - HOME PAGE -->
-<div id="queue">
+<!-- START - QUEUE -->
+<div id="queue" style="display: none;">
     <div class="inner-page">
         <h1 class="name">Queue</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="queuePush">Push</button>
+        <button id="queuePop">Pop</button>
+        <br />
+        <br />
+        <canvas id="queueCanvas"></canvas>
     </div>
 </div>
-<!-- END - HOME PAGE -->
+<!-- END - QUEUE -->
+
+<!-- START - CYCLIC QUEUE -->
+<div id="cyclic-queue" style="display: none;">
+    <div class="inner-page">
+        <h1 class="name">Cyclic Queue</h1>
+        <button id="cqStart">Start</button>
+        <button id="cqStop">Stop</button>
+        <button id="cqInsert">Insert</button>
+        <button id="cqDelete">Delete</button>
+        <br />
+        <br />
+        <canvas id="cqCanvas"></canvas>
+    </div>
+</div>
+<!-- END - CYCLIC QUEUE -->
 
 
 
