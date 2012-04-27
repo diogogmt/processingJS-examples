@@ -3,7 +3,6 @@ require(
     "./stack/stack",
     "./queue/queue",
     "./cyclic-queue/cyclic-queue",
-    "./stack/stackCanvas",
   ],
   function () {
 
